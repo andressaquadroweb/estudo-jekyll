@@ -16,22 +16,17 @@
 title: Blog de Testes
 email: contato@andressaquadro.com
 description: > # this means to ignore newlines until "baseurl:"
-  Blog para testes e estudos desenvolvido em Jekyll
+  Teste de blog
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://andressaquadro.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: andressaquadroweb
 github_username:  andressaquadroweb
-timezone: America/Sao_Paulo
-
-
 
 # Build settings
 markdown: kramdown
-theme: minima
+
 gems:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
-
-permalink: /:title
