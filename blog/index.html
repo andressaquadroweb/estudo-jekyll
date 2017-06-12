@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<main id="main" class="list-post">
+  {% if site.posts.size == 0 %}
+    <p>Não há posts</p>
+  {% else %}
+    {% for post in site.posts %}
+      <article class="post">
+        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+        <time>{{ post.date | date_to_string }}</time>
+      </article>
+    {% endfor %}
+  {% endif %}
+
+</main>

@@ -23,6 +23,12 @@ twitter_username: andressaquadroweb
 github_username:  andressaquadroweb
 
 # Build settings
+sass:
+  style: compressed
+  sass_dir: _sass
+
+permalink: /:title/
+
 markdown: kramdown
 
 gems:

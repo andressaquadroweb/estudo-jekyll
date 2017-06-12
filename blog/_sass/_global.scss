@@ -1,0 +1,73 @@
+/* _global.scss */
+/* VARIABLES -----------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Lobster|Raleway:300,400,500,600,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+$bodyFont  :  'Raleway', sans-serif;
+$titleFont :  'Lobster', cursive;
+$awesome   :  'FontAwesome';
+$light     :  300;
+$regular   :  400;
+$medium    :  500;
+$semiBold  :  600;
+$bold      :  700;
+$colorDark :  #222;
+$colorCta  :  #e91e63;
+$colorGray :  #666;
+$colorWhite:  #fff;
+$sizeFont  :  16px;
+/* --------------------------------------------*/
+
+body{
+  color:$colorGray;
+  margin: 0;
+  padding: 0;
+  font:{
+    family:$bodyFont;
+    size:$sizeFont;
+  }
+  line-height: 1.8em;
+}
+
+.container{
+  margin:auto;
+  padding:0 15px;
+  max-width: 1170px;
+  box-sizing: border-box;
+}
+.row{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#main{
+  max-width: 900px;
+  margin:30px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol{
+  margin: 0;
+  padding: 0;
+}
+
+.layer{
+  &:before{
+    content: "";
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -2,4 +2,16 @@
 layout: default
 ---
 
-{{ content }}
+<main id="main">
+  <article class="post">
+    <header>
+      <h2>{{ page.title }}</h2>
+      <ul>
+        <li><time>{{ page.date | date_to_string }}</time></li>
+        <li><span><i class="fa fa-tag" aria-hidden="true"></i> {{ page.categories }}</span></li>
+      </ul>
+    </header>
+
+    {{ content }}
+  </article>
+</main>

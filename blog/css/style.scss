@@ -1,0 +1,225 @@
+---
+# Style
+---
+/* master.scss */
+
+@import 'global';
+
+/* header */
+#header{
+  text-align: center;
+  background:$colorCta;
+  padding: 30px 0;
+  border-bottom: solid 10px darken($colorCta,10%);
+  & a{
+    text-decoration: none;
+    color:$colorWhite;
+    font:{
+      family:$titleFont;
+      size: 100px;
+      weight:$regular;
+    }
+    text-shadow:darken($colorCta,10%) 0px 8px 1px;
+    transition: color 1s;
+    &:hover{
+      color:lighten($colorCta,20%);
+      animation:hover-effect 1s ease-out alternate infinite;
+      @keyframes hover-effect{
+        0%{
+          color:lighten($colorCta,20%);
+        }
+        100%{
+          color:darken($colorCta,20%);
+        }
+      }
+    }
+  }
+  & button{
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background: none;
+    position: relative;
+    & i{
+      font-size: $sizeFont + 4;
+      text-align: center;
+      display: block;
+      margin:0px auto;
+      color:lighten($colorCta,15%);
+      text-shadow: none;
+      position: absolute;
+      left:0px;
+      right:0px;
+      animation:circle 0.5s ease-out alternate infinite;
+      @keyframes circle{
+        0%{
+          top:15px;
+        }
+        100%{
+          top:20px;
+        }
+      }
+    }
+
+  }
+}
+
+/* menu */
+#menu{
+  background:lighten($colorGray,50%);
+  border-bottom:solid 1px lighten($colorGray,45%);
+  height: 45px;
+  line-height: 45px;
+  @media (max-width: 991px){
+    clear: both;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+  & .btn-menu{
+    display:none;
+    background: none;
+    border: 0;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    line-height: 45px;
+    font:{
+      weight:$bold;
+      family:$bodyFont;
+      size:$sizeFont - 3;
+    }
+    color:$colorDark;
+    padding:0 15px;
+    width: 100%;
+    text-align: left;
+    outline: 0;
+    & i{
+      margin: 0 5px 0 0;
+    }
+    &:hover{
+      color: $colorCta;
+    }
+    @media (max-width: 991px){
+      display: block;
+    }
+  }
+  & ul{
+    list-style: none;
+    @media (max-width: 991px){
+      display: none;
+      background:lighten($colorGray,40%);
+      width: 100%;
+      float: left;
+      margin: 0 0 15px 0;
+    }
+    & li{
+      display: inline-block;
+      @media (max-width: 991px){
+        display: block;
+        float: left;
+        width: 100%;
+        & a{
+          width: 100%;
+          display: inline-block;
+          padding: 0 15px;
+          line-height: normal;
+        }
+      }
+      & a{
+        text-decoration: none;
+        text-transform: uppercase;
+        font:{
+          weight:$bold;
+          family:$bodyFont;
+          size:$sizeFont - 3;
+        }
+        color:$colorDark;
+        padding:15px;
+        box-sizing: border-box;
+        &:hover{
+          background:lighten($colorGray,45%);
+          color:$colorCta;
+        }
+      }
+    }
+  }
+}
+
+/* posts */
+main#main.list-post{
+  max-width: 1170px;
+  width: 100%;
+  & .post{
+    margin:0 0 30px 0;
+    border-left:solid 10px lighten($colorGray,50%);
+    padding: 0 15px;
+  }
+}
+.post{
+  margin:0 0 30px 0;
+  padding: 0 15px;
+  & h2 a{
+    width: 100%;
+    display: block;
+  }
+  & header{
+    margin:0 0 30px 0;
+    & ul{
+      margin:10px 0;
+      color:lighten($colorGray,30%);
+      font: {
+        size:$sizeFont - 3;
+        weight:$bold;
+      }
+      list-style: none;
+      & li{
+        display: inline-block;
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+  & h2{
+    & a{
+      text-decoration: none;
+      color:darken($colorCta,20%);
+      &:hover{
+        color:$colorCta;
+      }
+    }
+  }
+  & time{
+    color:lighten($colorGray,30%);
+    font: {
+      size:$sizeFont - 3;
+      weight:$bold;
+    }
+    &:before{
+      content:"\f133";
+      margin:0 5px 0 0;
+      font:{
+        family:$awesome;
+        size:$sizeFont - 3;
+        weight:$regular;
+      }
+    }
+  }
+}
+
+/* footer */
+#footer{
+  text-align: center;
+  font:{
+    size: $sizeFont - 2;
+    weight:$bold;
+  }
+  color:$colorGray;
+  text-shadow:$colorWhite 0px 2px 0px;
+  background: lighten($colorGray,50%);
+  padding: 15px 0;
+  margin: 100px 0 0 0;
+  position: fixed;
+  bottom: 0px;
+  left:0px;
+  width: 100%;
+}
